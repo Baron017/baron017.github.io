@@ -11,6 +11,9 @@
 <body>
     <header>
         <div class="container">
+            <!-- Profile Picture -->
+            <img src="profile.jpg" alt="Baron Offei-Darko" class="profile-pic">
+            
             <h1>BARON OFFEI-DARKO</h1>
             <h2 class="subtitle">Data Scientist</h2>
             <div class="contact-info">
