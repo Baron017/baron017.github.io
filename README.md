@@ -1,4 +1,4 @@
-# baron017.github.io
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +13,7 @@
     <header>
         <div class="container">
             <h1>BARON OFFEI-DARKO</h1>
-            <h2 class="subtitle">Data Scientist & Software Engineer</h2>
+            <h2 class="subtitle">Data Scientist</h2>
             <div class="contact-info">
                 <a href="https://www.linkedin.com/in/baron-offei-darko-077b1b171/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
                 <a href="mailto:baronoffeid@gmail.com"><i class="fas fa-envelope"></i> baronoffeid@gmail.com</a>
