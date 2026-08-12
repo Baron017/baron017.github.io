@@ -28,6 +28,16 @@ body {
 }
 
 /* --- Header --- */
+.profile-pic {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: block; /* Ensures it sits on its own line above the name */
+}
 header {
     background: linear-gradient(to right, #1E3A8A, #172554);
     padding: 60px 0 40px;
