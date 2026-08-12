@@ -70,7 +70,7 @@
 
         <!-- Projects Section -->
         <section id="projects">
-            <h2 class="section-title"><i class="fas fa-project-diagram"></i> Work Experience & Projects</h2>
+            <h2 class="section-title"><i class="fas fa-project-diagram"></i>Projects</h2>
             
             <div class="card project-card">
                 <h3>Deep Learning Image Classification (QuickDraw dataset)</h3>
