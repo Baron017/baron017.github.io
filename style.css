@@ -29,8 +29,8 @@ body {
 
 /* --- Header --- */
 .profile-pic {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid var(--accent-color);
