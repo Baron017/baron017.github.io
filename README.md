@@ -62,7 +62,7 @@
                     <div class="tags">
                         <span>Machine Learning</span><span>LLM</span><span>AWS</span><span>Microsoft Azure</span>
                         <span>Node.js</span><span>Java</span><span>C</span><span>HTML</span><span>Power BI</span>
-                        <span>MATLAB</span><span>Microsoft Windows Server</span><span>PowerShell</span><span>IT Systems</span>
+                        <span>MATLAB</span>
                     </div>
                 </div>
             </div>
