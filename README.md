@@ -36,7 +36,6 @@
                     <span class="date">Sept 2025 - Present</span>
                 </div>
                 <p class="degree">MSc Data Science</p>
-                <p class="grade">Projected: <strong>DISTINCTION</strong></p>
             </div>
 
             <div class="card">
@@ -44,7 +43,6 @@
                     <h3>Anglia Ruskin University (Cambridge)</h3>
                 </div>
                 <p class="degree">BEng. Computer Science (Hons)</p>
-                <p class="grade">Grade: <strong>UPPER SECOND CLASS</strong></p>
             </div>
         </section>
 
@@ -56,14 +54,13 @@
                     <h3>Proficient</h3>
                     <div class="tags">
                         <span>Python</span><span>SQL</span><span>Tableau</span><span>NumPy</span><span>Matplotlib</span>
-                        <span>R</span><span>Deep Learning</span><span>Active Directory</span><span>CRM</span>
-                        <span>Microsoft Office Suite (Word, Excel, PowerPoint, Outlook, Access)</span>
+                        <span>R</span><span>Deep Learning</span><span>CRM</span><span>Pandas</span>
                     </div>
                 </div>
                 <div class="skill-category mt-2">
                     <h3>Familiar</h3>
                     <div class="tags">
-                        <span>Machine Learning</span><span>LLM</span><span>Pandas</span><span>AWS</span><span>Microsoft Azure</span>
+                        <span>Machine Learning</span><span>LLM</span><span>AWS</span><span>Microsoft Azure</span>
                         <span>Node.js</span><span>Java</span><span>C</span><span>HTML</span><span>Power BI</span>
                         <span>MATLAB</span><span>Microsoft Windows Server</span><span>PowerShell</span><span>IT Systems</span>
                     </div>
@@ -76,13 +73,19 @@
             <h2 class="section-title"><i class="fas fa-project-diagram"></i>Projects</h2>
             
             <div class="card project-card">
-                <h3>Deep Learning Image Classification (QuickDraw dataset)</h3>
-                <ul>
-                    <li>Developed an end-to-end computer vision pipeline to classify 15 complex categories from a 112,500-image dataset.</li>
-                    <li>Achieved 92.26% accuracy by implementing a custom VGG-style CNN, utilising targeted dropout layers and early stopping callbacks to eliminate overfitting.</li>
-                    <li>Engineered efficient data pipelines using stratified sampling and optimised hyperparameter tuning (batch size, dropout rates and architecture) to ensure rapid, stable convergence.</li>
-                </ul>
-            </div>
+    <!-- Replace your current Line 78 with this block -->
+    <h3>
+        <a href="https://github.com/Baron017/image-classification" target="_blank" style="color: #ffffff; text-decoration: none;">
+            Deep Learning Image Classification (QuickDraw dataset) <i class="fas fa-external-link-alt" style="font-size: 0.8em; margin-left: 8px;"></i>
+        </a>
+    </h3>
+    
+    <ul>
+        <li>Developed an end-to-end computer vision pipeline to classify 15 complex categories from a 112,500-image dataset.</li>
+        <li>Achieved 92.26% accuracy by implementing a custom VGG-style CNN, utilising targeted dropout layers and early stopping callbacks to eliminate overfitting.</li>
+        <li>Engineered efficient data pipelines using stratified sampling and optimised hyperparameter tuning (batch size, dropout rates and architecture) to ensure rapid, stable convergence.</li>
+    </ul>
+</div>
 
             <div class="card project-card">
                 <h3>Facial Recognition in MATLAB</h3>
