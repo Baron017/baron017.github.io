@@ -19,7 +19,7 @@
             <div class="contact-info">
                 <a href="https://www.linkedin.com/in/baron-offei-darko-077b1b171/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
                 <a href="mailto:baronoffeid@gmail.com"><i class="fas fa-envelope"></i> baronoffeid@gmail.com</a>
-                <span><i class="fas fa-map-marker-alt"></i> Canterbury</span>
+                <span><i class="fas fa-map-marker-alt"></i> England</span>
                 <span><i class="fas fa-phone"></i> +44 7459144832</span>
             </div>
         </div>
