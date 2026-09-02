@@ -88,11 +88,11 @@
 </div>
 
             <div class="card project-card">
-                <h3>Facial Recognition in MATLAB</h3>
+                <h3>Using an LLM as a Document Classifier in Python</h3>
                 <ul>
-                    <li>Developed a facial recognition system in MATLAB using the AlexNet neural network, training the convolutional neural network on images of five pro footballers for identity classification.</li>
-                    <li>Achieved about 95% model accuracy in correctly identifying individuals, demonstrating strong model performance and effective dataset preparation.</li>
-                    <li>Applied deep learning techniques for image classification, including transfer learning, data processing and model evaluation, to optimise recognition accuracy.</li>
+                    <li>•	Engineered an automated data ingestion pipeline using Python and REST APIs to extract medical preprint abstracts from medRxiv, utilising Pandas to resolve a severe class imbalance by filtering for high-density to ensure statistical validity.</li>
+                    <li>•	Fine-tuned a domain-specific LLM (BioMedBERT) for multi-class sequence classification using PyTorch and the Hugging Face ecosystem, managing sub-word tokenisation and tensor padding to preserve complex clinical syntax.</li>
+                    <li>•	Designed a custom evaluation framework using Scikit-learn to optimise for the Macro F1-score, successfully diagnosing early-stage model overfitting by analysing divergent training and validation loss curves to inform future hyperparameter tuningli>
                 </ul>
             </div>
         </section>
