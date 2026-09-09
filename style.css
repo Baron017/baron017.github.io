@@ -1,119 +1,301 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baron Offei-Darko | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <!-- Top Navigation -->
-    <nav class="top-nav">
-        <a href="#" class="active">HOME</a>
-        <a href="#about">ABOUT</a>
-        <a href="#projects">PORTFOLIO</a>
-        <a href="#skills">SKILLS</a>
-    </nav>
+/* --- Core Variables & Reset --- */
+:root {
+    --primary-blue: #2c5c94; 
+    --text-dark: #222222;
+    --text-body: #444444;
+    --bg-white: #ffffff;
+    --bg-offwhite: #f4f7f9; 
+}
 
-    <!-- Hero Section -->
-    <section class="hero bg-light">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <h1>Kelly Adams</h1> <!-- Replace with your name if desired, keeping the style -->
-                <h1>Baron Offei-Darko</h1>
-                <h2 class="subtitle">DATA SCIENTIST</h2>
-                <p>I'm currently an MSc Data Science student with experience using Python, SQL, and Deep Learning. You can view my personal portfolio below.</p>
-                
-                <a href="#projects" class="btn">VIEW PORTFOLIO</a>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-                <div class="contact-links">
-                    <a href="https://www.linkedin.com/in/baron-offei-darko-077b1b171/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:baronoffeid@gmail.com"><i class="fas fa-envelope"></i></a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <!-- Make sure your image is named profile.jpg -->
-                <img src="profile.jpg" alt="Baron Offei-Darko">
-            </div>
-        </div>
-    </section>
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-body);
+    line-height: 1.6;
+    background-color: var(--bg-white);
+}
 
-    <!-- About / Education Section -->
-    <section id="about" class="container section-padding">
-        <h2 class="section-heading">ABOUT ME</h2>
-        <div class="about-grid">
-            <div class="about-text">
-                <p>I am a Data Scientist based in England (+44 7459144832), specialising in computer vision and natural language processing. I leverage deep learning models to solve complex classification problems.</p>
-            </div>
-            <div class="education-info">
-                <h3>Education</h3>
-                <p><strong>MSc Data Science</strong><br>University of Kent (Sept 2025 - Present)</p>
-                <p><strong>BEng. Computer Science (Hons)</strong><br>Anglia Ruskin University (Cambridge)</p>
-            </div>
-        </div>
-    </section>
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
 
-    <!-- Projects Section -->
-    <section id="projects" class="bg-light section-padding">
-        <div class="container">
-            <h2 class="section-heading">PORTFOLIO</h2>
-            
-            <div class="project-list">
-                <div class="project-item">
-                    <h3>
-                        <a href="https://github.com/Baron017/image-classification" target="_blank">
-                            Deep Learning Image Classification (QuickDraw dataset) <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </h3>
-                    <ul>
-                        <li>Developed an end-to-end computer vision pipeline to classify 15 complex categories from a 112,500-image dataset.</li>
-                        <li>Achieved 92.26% accuracy by implementing a custom VGG-style CNN, utilising targeted dropout layers and early stopping callbacks to eliminate overfitting.</li>
-                        <li>Engineered efficient data pipelines using stratified sampling and optimised hyperparameter tuning to ensure rapid, stable convergence.</li>
-                    </ul>
-                </div>
+.bg-light {
+    background-color: var(--bg-offwhite);
+}
 
-                <div class="project-item">
-                    <h3>
-                        <a href="https://github.com/Baron017/document-Classifier-" target="_blank">
-                            Using an LLM as a Document Classifier in Python <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </h3>
-                    <ul>
-                        <li>Engineered an automated data ingestion pipeline using Python and REST APIs to extract medical preprint abstracts from medRxiv, utilising Pandas to resolve a severe class imbalance.</li>
-                        <li>Fine-tuned a domain-specific LLM (BioMedBERT) for multi-class sequence classification using PyTorch and the Hugging Face ecosystem.</li>
-                        <li>Designed a custom evaluation framework using Scikit-learn to optimise for the Macro F1-score, successfully diagnosing early-stage model overfitting.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+.section-padding {
+    padding: 80px 30px;
+}
 
-    <!-- Skills Section -->
-    <section id="skills" class="container section-padding">
-        <h2 class="section-heading">SKILLS</h2>
-        <div class="skills-grid">
-            <div>
-                <h3 class="skills-title">Proficient</h3>
-                <div class="tags">
-                    <span>Python</span><span>SQL</span><span>Tableau</span><span>NumPy</span>
-                    <span>Matplotlib</span><span>R</span><span>Deep Learning</span><span>CRM</span><span>Pandas</span>
-                </div>
-            </div>
-            <div>
-                <h3 class="skills-title">Familiar</h3>
-                <div class="tags">
-                    <span>Machine Learning</span><span>LLM</span><span>AWS</span><span>Microsoft Azure</span>
-                    <span>Node.js</span><span>Java</span><span>C</span><span>HTML</span><span>Power BI</span><span>MATLAB</span>
-                </div>
-            </div>
-        </div>
-    </section>
+/* --- Navigation --- */
+.top-nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 30px 0;
+    background-color: var(--bg-offwhite);
+}
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Baron Offei-Darko. Hosted on <a href="https://baron017.github.io">baron017.github.io</a></p>
-        </div>
-    </footer>
-</body>
-</html>
+.top-nav a {
+    text-decoration: none;
+    color: var(--text-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+}
+
+.top-nav a:hover, .top-nav a.active {
+    color: var(--primary-blue);
+}
+
+/* --- Hero Section (Split Layout) --- */
+.hero {
+    padding: 60px 0 100px 0;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    font-size: 4.5rem;
+    color: var(--primary-blue);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.hero-text .subtitle {
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 35px;
+    color: var(--text-dark);
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 14px 32px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #1f4572;
+}
+
+.contact-links {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+.contact-links a {
+    color: var(--primary-blue);
+    font-size: 1.5rem;
+    transition: opacity 0.2s;
+}
+
+.contact-links a:hover {
+    opacity: 0.7;
+}
+
+/* --- Hero Image (The Large Circle) --- */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 450px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* --- Section Headings --- */
+.section-heading {
+    font-size: 2.2rem;
+    color: var(--text-dark);
+    letter-spacing: 4px;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+/* --- About Grid --- */
+.about-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 60px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+}
+
+.education-info h3 {
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.education-info p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+/* --- Visual Project Grid Layout --- */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-top: 10px;
+}
+
+.project-card-new {
+    background-color: var(--bg-white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e1e8ed;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card-new:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.project-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center; /* Adjusts how the image is centered */
+    border-bottom: 1px solid #e1e8ed;
+    display: block; 
+    transition: opacity 0.2s ease;
+}
+
+.project-card-new a:hover .project-image {
+    opacity: 0.85;
+}
+
+.project-info {
+    padding: 25px;
+}
+
+.project-info h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.project-info h3 a {
+    color: var(--primary-blue);
+    text-decoration: none;
+}
+
+.project-info h3 a:hover {
+    text-decoration: underline;
+}
+
+.project-info p {
+    font-size: 1.05rem;
+    color: var(--text-body);
+    line-height: 1.6;
+}
+
+/* --- Skills --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.skills-title {
+    margin-bottom: 20px;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tags span {
+    background-color: var(--bg-offwhite);
+    color: var(--primary-blue);
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: 1px solid #d1dce6;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-body);
+}
+
+footer a {
+    color: var(--primary-blue);
+    text-decoration: none;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 850px) {
+    .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .hero-image {
+        justify-content: center;
+    }
+    .hero-image img {
+        max-width: 300px;
+    }
+    .about-grid, .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-links {
+        justify-content: center;
+    }
+    .top-nav {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
