@@ -1,10 +1,9 @@
-/* --- Variables --- */
+/* --- Base Setup --- */
 :root {
-    --primary-blue: #2274A5; /* Matched to the blue in the reference image */
-    --text-dark: #333333;
+    --primary-color: #2274A5;
+    --bg-outside: #e9ecef; /* Darker background outside the paper */
+    --text-main: #333333;
     --text-muted: #666666;
-    --bg-white: #ffffff;
-    --border-color: #e5e5e5;
 }
 
 * {
@@ -14,258 +13,185 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: var(--text-dark);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: var(--bg-outside);
+    color: var(--text-main);
     line-height: 1.6;
-    background-color: var(--bg-white);
+    padding: 40px 20px; /* Space around the paper */
 }
 
-/* --- Main Layout (2 Columns) --- */
-.layout-wrapper {
+/* --- The "Sheet of Paper" --- */
+.paper-container {
     max-width: 1100px;
-    margin: 60px auto;
-    padding: 0 30px;
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 60px;
+    margin: 0 auto;
+    background: #ffffff;
+    display: flex; /* This splits it in two */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* The paper shadow */
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-/* --- Left Sidebar --- */
-.sidebar {
-    text-align: left;
-}
-
-.sidebar-name {
-    color: var(--primary-blue);
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-    font-weight: 700;
+/* --- Left Half (Details) --- */
+.left-half {
+    width: 35%; /* Takes up 35% of the paper */
+    background-color: #fafafa;
+    padding: 50px 40px;
+    border-right: 1px solid #e0e0e0; /* The vertical line */
 }
 
 .profile-pic {
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 15px;
-    background-color: #f0f0f0;
-}
-
-.sidebar-desc {
-    color: var(--text-muted);
-    font-size: 1.05rem;
     margin-bottom: 20px;
+    border: 3px solid var(--primary-color);
 }
 
-.sidebar-contact {
+.name {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1.2;
+}
+
+.role {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.contact-info {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     margin-bottom: 30px;
 }
 
-.sidebar-contact a, .sidebar-contact span {
-    color: var(--primary-blue);
+.contact-info a, .contact-info span {
+    color: var(--text-main);
     text-decoration: none;
-    font-size: 0.95rem;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
+    font-size: 0.95rem;
 }
 
-.sidebar-contact a:hover {
+.contact-info a:hover {
+    color: var(--primary-color);
     text-decoration: underline;
 }
 
-.sidebar-contact span {
-    color: var(--text-muted);
+.contact-info i {
+    color: var(--primary-color);
+    width: 20px;
 }
 
-/* --- CV Button --- */
-.cv-section {
-    margin-top: 20px;
-}
-
-.cv-btn {
-    display: inline-block;
-    background-color: #f8f9fa;
-    color: var(--text-dark);
-    border: 1px solid #dcdcdc;
-    padding: 10px 15px;
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 0.95rem;
-    font-weight: 500;
-    transition: background-color 0.2s;
-    width: 100%;
+.cv-button {
+    display: block;
     text-align: center;
-}
-
-.cv-btn i {
-    margin-right: 5px;
-    color: var(--primary-blue);
-}
-
-.cv-btn:hover {
-    background-color: #e9ecef;
-}
-
-/* --- Right Content Area --- */
-.main-title {
-    font-size: 2.8rem;
-    font-weight: 700;
-    margin-bottom: 15px;
-    color: var(--text-dark);
-}
-
-.skills-summary {
-    font-size: 1.1rem;
-    margin-bottom: 40px;
-}
-
-.content-section {
-    margin-bottom: 50px;
-}
-
-.content-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: var(--text-dark);
-}
-
-/* --- Education List --- */
-.education-list {
-    list-style: none;
-}
-
-.education-list li {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.education-list li:last-child {
-    border-bottom: none;
-}
-
-.degree {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 12px;
+    border-radius: 4px;
+    text-decoration: none;
     font-weight: 600;
+    margin-bottom: 40px;
+    transition: background-color 0.2s;
+}
+
+.cv-button:hover {
+    background-color: #1a5b82;
+}
+
+.details-section {
+    margin-bottom: 30px;
+}
+
+.details-section h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.details-section p {
+    font-size: 0.95rem;
     color: var(--text-muted);
 }
 
-.uni {
-    color: var(--text-muted);
-    text-align: right;
+.mt-1 {
+    margin-top: 15px;
 }
 
-.uni em {
-    font-style: italic;
-    color: #888;
-    margin-left: 5px;
+/* --- Right Half (Projects) --- */
+.right-half {
+    width: 65%; /* Takes up 65% of the paper */
+    padding: 50px;
 }
 
-/* --- Projects --- */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+.section-title {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: var(--text-main);
 }
 
-.project-card-new {
-    background-color: var(--bg-white);
+.project-card {
+    margin-bottom: 40px;
+    border: 1px solid #e0e0e0;
     border-radius: 8px;
     overflow: hidden;
-    border: 1px solid var(--border-color);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.project-card-new:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
-.project-image {
+.project-card img {
     width: 100%;
-    height: 200px;
+    height: 280px;
     object-fit: cover;
-    border-bottom: 1px solid var(--border-color);
-    display: block; 
-    transition: opacity 0.2s ease;
+    object-position: center;
+    display: block;
+    border-bottom: 1px solid #e0e0e0;
 }
 
-.project-card-new a:hover .project-image {
-    opacity: 0.9;
+.project-content {
+    padding: 25px;
 }
 
-.project-info {
-    padding: 20px;
-}
-
-.project-info h3 {
+.project-content h3 {
+    font-size: 1.4rem;
     margin-bottom: 10px;
-    font-size: 1.2rem;
 }
 
-.project-info h3 a {
-    color: var(--text-dark);
+.project-content h3 a {
+    color: var(--primary-color);
     text-decoration: none;
 }
 
-.project-info h3 a:hover {
-    color: var(--primary-blue);
+.project-content h3 a:hover {
+    text-decoration: underline;
 }
 
-.project-info p {
-    font-size: 0.95rem;
+.project-content p {
     color: var(--text-muted);
 }
 
-/* --- Footer --- */
-footer {
-    text-align: center;
-    padding: 30px;
-    color: var(--text-muted);
-    border-top: 1px solid var(--border-color);
-    margin-top: 40px;
-}
-
-footer a {
-    color: var(--primary-blue);
-    text-decoration: none;
-}
-
-/* --- Responsive Adjustments --- */
-@media (max-width: 850px) {
-    .layout-wrapper {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        margin: 30px auto;
+/* --- Mobile Responsiveness --- */
+@media (max-width: 900px) {
+    .paper-container {
+        flex-direction: column; /* Stacks the halves on mobile */
     }
-    
-    .sidebar {
-        text-align: center;
-        border-bottom: 1px solid var(--border-color);
-        padding-bottom: 30px;
+    .left-half, .right-half {
+        width: 100%;
+        border-right: none;
     }
-    
-    .sidebar-contact {
-        align-items: center;
-    }
-    
-    .education-list li {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
-    }
-    
-    .uni {
-        text-align: left;
-    }
-    
-    .cv-btn {
-        width: auto;
-        padding: 10px 30px;
+    .left-half {
+        border-bottom: 1px solid #e0e0e0;
     }
 }
