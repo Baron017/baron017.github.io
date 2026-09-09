@@ -1,248 +1,119 @@
-/* --- Monochrome Theme Variables --- */
-:root {
-    --bg-main: #F9FAFB;         /* Very light gray background */
-    --bg-card: #FFFFFF;         /* Crisp white cards */
-    --text-main: #111827;       /* Near black for high contrast readability */
-    --text-muted: #4B5563;      /* Mid-gray for secondary text */
-    --accent-color: #000000;    /* Stark black for accents and links */
-    --border-color: #E5E7EB;    /* Light gray for subtle borders */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baron Offei-Darko | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <a href="#" class="active">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#projects">PORTFOLIO</a>
+        <a href="#skills">SKILLS</a>
+    </nav>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <!-- Hero Section -->
+    <section class="hero bg-light">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Kelly Adams</h1> <!-- Replace with your name if desired, keeping the style -->
+                <h1>Baron Offei-Darko</h1>
+                <h2 class="subtitle">DATA SCIENTIST</h2>
+                <p>I'm currently an MSc Data Science student with experience using Python, SQL, and Deep Learning. You can view my personal portfolio below.</p>
+                
+                <a href="#projects" class="btn">VIEW PORTFOLIO</a>
 
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: var(--bg-main);
-    color: var(--text-main);
-    line-height: 1.6;
-}
+                <div class="contact-links">
+                    <a href="https://www.linkedin.com/in/baron-offei-darko-077b1b171/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:baronoffeid@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- Make sure your image is named profile.jpg -->
+                <img src="profile.jpg" alt="Baron Offei-Darko">
+            </div>
+        </div>
+    </section>
 
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+    <!-- About / Education Section -->
+    <section id="about" class="container section-padding">
+        <h2 class="section-heading">ABOUT ME</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>I am a Data Scientist based in England (+44 7459144832), specialising in computer vision and natural language processing. I leverage deep learning models to solve complex classification problems.</p>
+            </div>
+            <div class="education-info">
+                <h3>Education</h3>
+                <p><strong>MSc Data Science</strong><br>University of Kent (Sept 2025 - Present)</p>
+                <p><strong>BEng. Computer Science (Hons)</strong><br>Anglia Ruskin University (Cambridge)</p>
+            </div>
+        </div>
+    </section>
 
-/* --- Header Layout --- */
-header {
-    background: var(--bg-card);
-    padding: 50px 0;
-    border-bottom: 1px solid var(--border-color);
-}
+    <!-- Projects Section -->
+    <section id="projects" class="bg-light section-padding">
+        <div class="container">
+            <h2 class="section-heading">PORTFOLIO</h2>
+            
+            <div class="project-list">
+                <div class="project-item">
+                    <h3>
+                        <a href="https://github.com/Baron017/image-classification" target="_blank">
+                            Deep Learning Image Classification (QuickDraw dataset) <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </h3>
+                    <ul>
+                        <li>Developed an end-to-end computer vision pipeline to classify 15 complex categories from a 112,500-image dataset.</li>
+                        <li>Achieved 92.26% accuracy by implementing a custom VGG-style CNN, utilising targeted dropout layers and early stopping callbacks to eliminate overfitting.</li>
+                        <li>Engineered efficient data pipelines using stratified sampling and optimised hyperparameter tuning to ensure rapid, stable convergence.</li>
+                    </ul>
+                </div>
 
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 30px;
-}
+                <div class="project-item">
+                    <h3>
+                        <a href="https://github.com/Baron017/document-Classifier-" target="_blank">
+                            Using an LLM as a Document Classifier in Python <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </h3>
+                    <ul>
+                        <li>Engineered an automated data ingestion pipeline using Python and REST APIs to extract medical preprint abstracts from medRxiv, utilising Pandas to resolve a severe class imbalance.</li>
+                        <li>Fine-tuned a domain-specific LLM (BioMedBERT) for multi-class sequence classification using PyTorch and the Hugging Face ecosystem.</li>
+                        <li>Designed a custom evaluation framework using Scikit-learn to optimise for the Macro F1-score, successfully diagnosing early-stage model overfitting.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.profile-section {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
+    <!-- Skills Section -->
+    <section id="skills" class="container section-padding">
+        <h2 class="section-heading">SKILLS</h2>
+        <div class="skills-grid">
+            <div>
+                <h3 class="skills-title">Proficient</h3>
+                <div class="tags">
+                    <span>Python</span><span>SQL</span><span>Tableau</span><span>NumPy</span>
+                    <span>Matplotlib</span><span>R</span><span>Deep Learning</span><span>CRM</span><span>Pandas</span>
+                </div>
+            </div>
+            <div>
+                <h3 class="skills-title">Familiar</h3>
+                <div class="tags">
+                    <span>Machine Learning</span><span>LLM</span><span>AWS</span><span>Microsoft Azure</span>
+                    <span>Node.js</span><span>Java</span><span>C</span><span>HTML</span><span>Power BI</span><span>MATLAB</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.profile-pic {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid var(--accent-color);
-}
-
-.title-section h1 {
-    font-size: 2.2rem;
-    letter-spacing: 1px;
-    font-weight: 800;
-    color: var(--accent-color);
-}
-
-.subtitle {
-    color: var(--text-muted);
-    font-size: 1.2rem;
-    font-weight: 400;
-}
-
-/* Align contact info to the right */
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 8px;
-    font-size: 0.95rem;
-}
-
-.contact-info a, .contact-info span {
-    color: var(--text-muted);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: color 0.2s;
-}
-
-.contact-info a:hover {
-    color: var(--accent-color);
-    font-weight: 500;
-}
-
-/* --- Main Content --- */
-main {
-    padding: 60px 20px;
-}
-
-section {
-    margin-bottom: 60px;
-}
-
-.section-title {
-    font-size: 1.6rem;
-    color: var(--accent-color);
-    margin-bottom: 30px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-bottom: 2px solid var(--accent-color);
-    padding-bottom: 10px;
-    display: inline-block;
-}
-
-/* --- Cards --- */
-.card {
-    background-color: var(--bg-card);
-    padding: 30px;
-    border-radius: 8px;
-    margin-bottom: 25px;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    transition: box-shadow 0.2s, transform 0.2s;
-}
-
-.card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    transform: translateY(-2px);
-}
-
-.card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 10px;
-}
-
-.card-header h3 {
-    font-size: 1.3rem;
-    color: var(--accent-color);
-}
-
-.date {
-    color: var(--text-muted);
-    font-weight: 600;
-    font-size: 0.9rem;
-}
-
-.degree {
-    font-size: 1.1rem;
-    color: var(--text-main);
-}
-
-/* --- Skills Tags --- */
-.skill-category h3 {
-    color: var(--accent-color);
-    margin-bottom: 15px;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.mt-2 {
-    margin-top: 25px;
-}
-
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.tags span {
-    background-color: var(--bg-main);
-    color: var(--text-main);
-    padding: 6px 14px;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    border: 1px solid var(--border-color);
-}
-
-/* --- Projects --- */
-.project-card h3 {
-    margin-bottom: 15px;
-    font-size: 1.3rem;
-}
-
-.project-link {
-    color: var(--accent-color);
-    text-decoration: none;
-    transition: opacity 0.2s;
-}
-
-.project-link:hover {
-    text-decoration: underline;
-    opacity: 0.8;
-}
-
-.link-icon {
-    font-size: 0.8em;
-    margin-left: 5px;
-    color: var(--text-muted);
-}
-
-.project-card ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    color: var(--text-muted);
-}
-
-.project-card ul li {
-    margin-bottom: 10px;
-}
-
-/* --- Footer --- */
-footer {
-    text-align: center;
-    padding: 40px;
-    color: var(--text-muted);
-    background-color: var(--bg-card);
-    border-top: 1px solid var(--border-color);
-}
-
-.footer-link {
-    color: var(--accent-color);
-    text-decoration: none;
-    font-weight: 600;
-}
-
-/* --- Mobile Responsiveness --- */
-@media (max-width: 650px) {
-    .header-content {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .contact-info {
-        align-items: flex-start;
-        margin-top: 15px;
-    }
-    .card-header {
-        flex-direction: column;
-    }
-    .date {
-        margin-top: 5px;
-    }
-}
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Baron Offei-Darko. Hosted on <a href="https://baron017.github.io">baron017.github.io</a></p>
+        </div>
+    </footer>
+</body>
+</html>
