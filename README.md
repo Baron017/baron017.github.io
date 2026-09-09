@@ -10,12 +10,15 @@
 </head>
 <body>
     <header>
-        <div class="container">
-            <!-- Profile Picture -->
-            <img src="profile.jpg" alt="Baron Offei-Darko" class="profile-pic">
-            
-            <h1>BARON OFFEI-DARKO</h1>
-            <h2 class="subtitle">Data Scientist</h2>
+        <div class="container header-content">
+            <div class="profile-section">
+                <!-- Make sure your image is named profile.jpg -->
+                <img src="profile.jpg" alt="Baron Offei-Darko" class="profile-pic">
+                <div class="title-section">
+                    <h1>BARON OFFEI-DARKO</h1>
+                    <h2 class="subtitle">Data Scientist</h2>
+                </div>
+            </div>
             <div class="contact-info">
                 <a href="https://www.linkedin.com/in/baron-offei-darko-077b1b171/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
                 <a href="mailto:baronoffeid@gmail.com"><i class="fas fa-envelope"></i> baronoffeid@gmail.com</a>
@@ -28,7 +31,7 @@
     <main class="container">
         <!-- Education Section -->
         <section id="education">
-            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education & Qualifications</h2>
+            <h2 class="section-title">Education & Qualifications</h2>
             
             <div class="card">
                 <div class="card-header">
@@ -48,7 +51,7 @@
 
         <!-- Skills Section -->
         <section id="skills">
-            <h2 class="section-title"><i class="fas fa-code"></i> Technical Skills</h2>
+            <h2 class="section-title">Technical Skills</h2>
             <div class="card">
                 <div class="skill-category">
                     <h3>Proficient</h3>
@@ -70,29 +73,31 @@
 
         <!-- Projects Section -->
         <section id="projects">
-            <h2 class="section-title"><i class="fas fa-project-diagram"></i>Projects</h2>
+            <h2 class="section-title">Projects</h2>
             
             <div class="card project-card">
-    <!-- Replace your current Line 78 with this block -->
-    <h3>
-        <a href="https://github.com/Baron017/image-classification" target="_blank" style="color: #ffffff; text-decoration: none;">
-            Deep Learning Image Classification (QuickDraw dataset) <i class="fas fa-external-link-alt" style="font-size: 0.8em; margin-left: 8px;"></i>
-        </a>
-    </h3>
-    
-    <ul>
-        <li>Developed an end-to-end computer vision pipeline to classify 15 complex categories from a 112,500-image dataset.</li>
-        <li>Achieved 92.26% accuracy by implementing a custom VGG-style CNN, utilising targeted dropout layers and early stopping callbacks to eliminate overfitting.</li>
-        <li>Engineered efficient data pipelines using stratified sampling and optimised hyperparameter tuning (batch size, dropout rates and architecture) to ensure rapid, stable convergence.</li>
-    </ul>
-</div>
+                <h3>
+                    <a href="https://github.com/Baron017/image-classification" target="_blank" class="project-link">
+                        Deep Learning Image Classification (QuickDraw dataset) <i class="fas fa-external-link-alt link-icon"></i>
+                    </a>
+                </h3>
+                <ul>
+                    <li>Developed an end-to-end computer vision pipeline to classify 15 complex categories from a 112,500-image dataset.</li>
+                    <li>Achieved 92.26% accuracy by implementing a custom VGG-style CNN, utilising targeted dropout layers and early stopping callbacks to eliminate overfitting.</li>
+                    <li>Engineered efficient data pipelines using stratified sampling and optimised hyperparameter tuning (batch size, dropout rates and architecture) to ensure rapid, stable convergence.</li>
+                </ul>
+            </div>
 
             <div class="card project-card">
-                <h3>Using an LLM as a Document Classifier in Python</h3>
+                <h3>
+                    <a href="https://github.com/Baron017/document-Classifier-" target="_blank" class="project-link">
+                        Using an LLM as a Document Classifier in Python <i class="fas fa-external-link-alt link-icon"></i>
+                    </a>
+                </h3>
                 <ul>
-                    <li>•	Engineered an automated data ingestion pipeline using Python and REST APIs to extract medical preprint abstracts from medRxiv, utilising Pandas to resolve a severe class imbalance by filtering for high-density to ensure statistical validity.</li>
-                    <li>•	Fine-tuned a domain-specific LLM (BioMedBERT) for multi-class sequence classification using PyTorch and the Hugging Face ecosystem, managing sub-word tokenisation and tensor padding to preserve complex clinical syntax.</li>
-                    <li>•	Designed a custom evaluation framework using Scikit-learn to optimise for the Macro F1-score, successfully diagnosing early-stage model overfitting by analysing divergent training and validation loss curves to inform future hyperparameter tuningli>
+                    <li>Engineered an automated data ingestion pipeline using Python and REST APIs to extract medical preprint abstracts from medRxiv, utilising Pandas to resolve a severe class imbalance by filtering for high-density to ensure statistical validity.</li>
+                    <li>Fine-tuned a domain-specific LLM (BioMedBERT) for multi-class sequence classification using PyTorch and the Hugging Face ecosystem, managing sub-word tokenisation and tensor padding to preserve complex clinical syntax.</li>
+                    <li>Designed a custom evaluation framework using Scikit-learn to optimise for the Macro F1-score, successfully diagnosing early-stage model overfitting by analysing divergent training and validation loss curves to inform future hyperparameter tuning.</li>
                 </ul>
             </div>
         </section>
@@ -100,7 +105,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Baron Offei-Darko. Hosted on <a href="https://baron017.github.io" style="color: var(--accent-color);">baron017.github.io</a></p>
+            <p>&copy; 2026 Baron Offei-Darko. Hosted on <a href="https://baron017.github.io" class="footer-link">baron017.github.io</a></p>
         </div>
     </footer>
 </body>
